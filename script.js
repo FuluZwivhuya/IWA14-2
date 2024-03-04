@@ -3,9 +3,10 @@ function add (a, b) { return a + b }
 function multiply (a, b) { return a * b }
 
 function internal() {
-    const added = this.add(this.internal.b,this.internal.c);
-	const multiplied = this.multiply(added, this.internal.b);
+    const added = add(this.internal.a,this.internal.b);
+	const multiplied = multiply(added, this.internal.c);
 	console.log(multiplied)
+	return multiplied
    // console.log(added);
 };   
 
